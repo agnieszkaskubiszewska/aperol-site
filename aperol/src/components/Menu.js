@@ -12,12 +12,6 @@ class Menu extends Component {
   render() {
     return (
       <div className='menu'>
-        <img 
-          src="gallery/logo.png" 
-          alt="Logo" 
-          className="menu-logo" 
-        />
-
         <motion.button
           className='menu-buttons'
           whileHover={{ scale: 1.1 }}      

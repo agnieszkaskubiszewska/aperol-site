@@ -1,5 +1,5 @@
 .footer {
-    background-color: #cc5803;
+    background-color: rgba(204, 88, 3, 0.8); /* Ustawia kolor tła na lekko transparentny */
     color: white; 
     padding: 20px; 
     text-align: center; 

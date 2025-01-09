@@ -1,5 +1,5 @@
 .menu {
-    background-color: #CC5803;
+    background-color: rgba(204, 88, 3, 0.8); /* Ustawia kolor tła na lekko transparentny */
     position: fixed;
     top: 0;
     right: 0; /* Przenosi menu na prawą stronę */
@@ -9,6 +9,7 @@
     justify-content: flex-end; /* Wyrównuje elementy do prawej strony */
     align-items: center; /* Wyrównuje elementy w pionie */
     padding: 0 20px; /* Dodaje odstępy po bokach */
+    z-index: 1000; /* Ustawia menu na najwyższym poziomie */
 }
 
 .menu-buttons {

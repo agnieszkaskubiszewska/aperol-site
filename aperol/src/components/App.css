@@ -15,4 +15,32 @@
   background-color: white; /* Kolor kuli */
   box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1); /* Cień wokół kuli dla lepszego efektu */
   transform: translateY(-50%); /* Dokładne wyrównanie do środka */
+  color: #ff9e62; /* Kolor tekstu na pomarańczowy */
+  font-size: 2.5em; /* Powiększa czcionkę */
+  
+}
+
+.second-ball {
+  position: fixed; /* Umożliwia utrzymanie pozycji na ekranie podczas przewijania */
+  top: 50%; /* Wyrównanie kuli do środka w pionie */
+  right: 50px; /* Odsuwa kulę bliżej środka od prawej krawędzi monitora */
+  width: 750px; /* Szerokość kuli */
+  height: 750px; /* Wysokość kuli */
+  border-radius: 50%; /* Zaokrągla rogi, tworząc kulę */
+  background-color: white; /* Kolor kuli */
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1); /* Cień wokół kuli dla lepszego efektu */
+  transform: translateY(-50%); /* Dokładne wyrównanie do środka */
+}
+.white-ball img {
+  position: absolute; 
+  bottom: 100px; 
+  right: 100px; 
+  width: 100px; 
+}
+
+.graphic {
+  position: absolute; /* Ustawiamy na absolute, aby móc przesuwać */
+  bottom: 100px; /* Ustawiamy wysokość, na jakiej obrazek ma być */
+  left: 190px; /* Możemy ustawić wartość 'left' do przesunięcia w lewo */
+  transform: scale(5); /* Zmienia rozmiar grafiki bez zmiany wartości width i height */
 }
