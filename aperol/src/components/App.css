@@ -1,7 +1,18 @@
 .App {
   text-align: center;
-  background-color: #f7934c;
+  background-color: rgb(255, 94, 0);
   width: 100%;
   height: 100vh;
 }
 
+.white-ball {
+  position: fixed; /* Umożliwia utrzymanie pozycji na ekranie podczas przewijania */
+  top: 50%; /* Wyrównanie kuli do środka w pionie */
+  left: 30px; /* Odsuwa kulę od lewej krawędzi monitora */
+  width: 500px; /* Szerokość kuli */
+  height: 500px; /* Wysokość kuli */
+  border-radius: 50%; /* Zaokrągla rogi, tworząc kulę */
+  background-color: white; /* Kolor kuli */
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1); /* Cień wokół kuli dla lepszego efektu */
+  transform: translateY(-50%); /* Dokładne wyrównanie do środka */
+}

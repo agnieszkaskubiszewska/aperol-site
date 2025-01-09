@@ -1,21 +1,58 @@
 import './App.css';
 import React, { Component } from 'react';
+import { motion } from "framer-motion";
+import './Menu.css';
 
 class Menu extends Component {
   constructor(props) {
     super(props);
-    this.state = {
-
-    };
-  } 
+    this.state = {};
+  }
 
   render() {
     return (
-      <div>
-        <button>About</button>
-        <button>Przepisy</button>
-        <button>Blog</button>
-        <button>Zdjęcia</button>
+      <div className='menu'>
+        <img 
+          src="gallery/logo.png" 
+          alt="Logo" 
+          className="menu-logo" 
+        />
+
+        <motion.button
+          className='menu-buttons'
+          whileHover={{ scale: 1.1 }}      
+          whileTap={{ scale: 0.95 }}   
+        >
+          About
+        </motion.button>
+        <motion.button
+          className='menu-buttons'
+          whileHover={{ scale: 1.1 }}      
+          whileTap={{ scale: 0.95 }}   
+        >
+          Blog
+        </motion.button>
+        <motion.button
+          className='menu-buttons'
+          whileHover={{ scale: 1.1 }}      
+          whileTap={{ scale: 0.95 }}   
+        >
+          Przepisy
+        </motion.button>
+        <motion.button
+          className='menu-buttons'
+          whileHover={{ scale: 1.1 }}      
+          whileTap={{ scale: 0.95 }}   
+        >
+          Zdjęcia
+        </motion.button>
+        <motion.button
+          className='menu-buttons'
+          whileHover={{ scale: 1.1 }}      
+          whileTap={{ scale: 0.95 }}   
+        >
+          Mapa
+        </motion.button>
       </div>
     );
   }

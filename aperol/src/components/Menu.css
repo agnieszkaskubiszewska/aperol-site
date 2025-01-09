@@ -1,0 +1,43 @@
+.menu {
+    background-color: #CC5803;
+    position: fixed;
+    top: 0;
+    right: 0; /* Przenosi menu na prawą stronę */
+    width: 100%; /* Menu zajmuje całą szerokość */
+    height: 100px; /* Wysokość menu */
+    display: flex; /* Ustawia elementy w rzędzie */
+    justify-content: flex-end; /* Wyrównuje elementy do prawej strony */
+    align-items: center; /* Wyrównuje elementy w pionie */
+    padding: 0 20px; /* Dodaje odstępy po bokach */
+}
+
+.menu-buttons {
+    background-color: #f5761c;
+    border: none;
+    margin: 0 10px; /* Odstępy między przyciskami */
+    display: inline-block;
+    padding: 10px 20px;
+    text-align: center;
+    text-decoration: none;
+    font-size: 16px;
+    color: white;
+    cursor: pointer;
+    border-radius: 30px; /* Zwiększono zaokrąglenie */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Dodano delikatny cień */
+    transition: background-color 0.3s ease, transform 0.2s ease; /* Płynna zmiana koloru i skalowanie */
+}
+
+.menu-buttons:hover {
+    background-color: #ff9e62; /* Zmiana koloru przy najechaniu */
+    transform: scale(1.1); /* Lekkie powiększenie przy najechaniu */
+}
+
+.menu-logo {
+    position: absolute;
+    top: 10px;
+    left: 50px;
+    width: 50px; /* Dostosuj wielkość logo */
+    height: auto;
+    z-index: 100;
+    display: block; /* Upewnij się, że obraz nie jest ukryty */
+}

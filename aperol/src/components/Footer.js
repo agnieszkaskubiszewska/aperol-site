@@ -1,5 +1,7 @@
 import './App.css';
 import React, { Component } from 'react';
+import './Footer.css';
+
 
 class Footer extends Component {
   constructor(props) {
@@ -12,10 +14,9 @@ class Footer extends Component {
   render() {
     return (
         <div className='footer'>
-        <a href="https://www.linkedin.com/in/agnieszka-skubiszewska-17aaa4106/">LinkedIn</a>
-        <a href="https://open.spotify.com/playlist/5NbleROaHyKOZDwJEPm7f5?si=fefe370b536842f0">Space Playlist</a>
-        <a href="https://github.com/agnieszkaskubiszewska"> GitHub</a>
-        <a href="mailto:agnieszka.space@wp.pl">Send email</a>
+        <a href="https://www.linkedin.com/in/agnieszka-skubiszewska-17aaa4106/" className="footer-link">LinkedIn</a>
+        <a href="https://github.com/agnieszkaskubiszewska" className="footer-link"> GitHub</a>
+        <a href="mailto:agnieszka.space@wp.pl" className="footer-link">Send email</a>
       </div>
     );
   }
