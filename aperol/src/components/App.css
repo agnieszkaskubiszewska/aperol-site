@@ -1,46 +1,67 @@
 .App {
   text-align: center;
-  background-color: rgb(255, 94, 0);
+  background-color: rgb(255, 94, 0); 
   width: 100%;
-  height: 100vh;
+  height: 100vh; 
+  overflow: hidden; 
+}
+
+.baner {
+  border: black
 }
 
 .white-ball {
-  position: fixed; /* Umożliwia utrzymanie pozycji na ekranie podczas przewijania */
-  top: 50%; /* Wyrównanie kuli do środka w pionie */
-  left: 30px; /* Odsuwa kulę od lewej krawędzi monitora */
-  width: 500px; /* Szerokość kuli */
-  height: 500px; /* Wysokość kuli */
-  border-radius: 50%; /* Zaokrągla rogi, tworząc kulę */
-  background-color: white; /* Kolor kuli */
-  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1); /* Cień wokół kuli dla lepszego efektu */
-  transform: translateY(-50%); /* Dokładne wyrównanie do środka */
-  color: #ff9e62; /* Kolor tekstu na pomarańczowy */
-  font-size: 2.5em; /* Powiększa czcionkę */
-  
+  position: fixed; 
+  top: 50%; 
+  left: 30px; 
+  width: 500px;
+  height: 500px;
+  border-radius: 50%; 
+  background-color: white; 
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2); 
+  transform: translateY(-50%); 
+  color: #ff9e62; 
+  font-size: 2.5em; 
 }
 
-.second-ball {
-  position: fixed; /* Umożliwia utrzymanie pozycji na ekranie podczas przewijania */
-  top: 50%; /* Wyrównanie kuli do środka w pionie */
-  right: 50px; /* Odsuwa kulę bliżej środka od prawej krawędzi monitora */
-  width: 750px; /* Szerokość kuli */
-  height: 750px; /* Wysokość kuli */
-  border-radius: 50%; /* Zaokrągla rogi, tworząc kulę */
-  background-color: white; /* Kolor kuli */
-  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1); /* Cień wokół kuli dla lepszego efektu */
-  transform: translateY(-50%); /* Dokładne wyrównanie do środka */
-}
+
 .white-ball img {
-  position: absolute; 
-  bottom: 100px; 
-  right: 100px; 
+  position: absolute;
+  bottom: 20px; 
+  right: 20px; 
   width: 100px; 
 }
 
 .graphic {
-  position: absolute; /* Ustawiamy na absolute, aby móc przesuwać */
-  bottom: 100px; /* Ustawiamy wysokość, na jakiej obrazek ma być */
-  left: 190px; /* Możemy ustawić wartość 'left' do przesunięcia w lewo */
-  transform: scale(5); /* Zmienia rozmiar grafiki bez zmiany wartości width i height */
+  position: absolute; 
+  bottom: 100px; 
+  left: 190px; 
+  transform: scale(5); 
+  pointer-events: none; 
 }
+
+.modal {
+  position: absolute; 
+  top: 50%; 
+  left: 50%; 
+  transform: translate(-50%, -50%);
+  font-size: 2em;
+  color: white;
+}
+
+.modal-button {
+  background-color: #f5761c;
+  border: none;
+  margin: 0 10px; 
+  display: inline-block;
+  padding: 10px 20px;
+  text-align: center;
+  text-decoration: none;
+  font-size: 16px;
+  color: white;
+  cursor: pointer;
+  border-radius: 30px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
