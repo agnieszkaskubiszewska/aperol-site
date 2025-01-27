@@ -2,7 +2,6 @@ import './App.css';
 import React, { Component } from 'react';
 import Menu from './Menu';
 import Footer from './Footer';
-import ReactCurvedText from 'react-curved-text';
 
 class App extends Component {
   state = {
@@ -35,27 +34,13 @@ class App extends Component {
         )}
         {isAllowed && (
           <>
-            <Menu />
-            <div className='baner'><img src={require("./baner.jpg")} alt="baner" /></div>
-            <div className="white-ball">
-              <ReactCurvedText
-                width={500}
-                height={500}
-                cx={250}
-                cy={250}
-                rx={200}
-                ry={200}
-                startOffset={100}
-                reversed={true}
-                text="Welcome to Aperol World"
-                textProps={{ style: { fontSize: 38, fill: 'orange', fontWeight: 'bold' } }}
-                textPathProps={null}
-                tspanProps={null}
-                ellipseProps={null}
-                svgProps={{}}
-              />
-              <img className="graphic" src={require("./grf.jpg")} alt="aperol" />
-            </div>
+        <Menu />
+<div className='baner'>
+  <img src={require("./baner.jpg")} alt="baner" />
+</div>
+<div className='baner-text'> <h1>Real Aperol Experience</h1></div>
+<div className='baner-text-2'><p>Ignite the orange spark!</p></div>
+<div className='second-baner'></div>
             <Footer />
           </>
         )}

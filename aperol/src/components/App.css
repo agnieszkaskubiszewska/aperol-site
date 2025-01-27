@@ -7,36 +7,51 @@
 }
 
 .baner {
-  border: black
+  position: relative;
+border: black;
+height: 20vh;
+filter: brightness(40%);
 }
 
-.white-ball {
-  position: fixed; 
-  top: 50%; 
-  left: 30px; 
-  width: 500px;
-  height: 500px;
-  border-radius: 50%; 
-  background-color: white; 
-  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2); 
-  transform: translateY(-50%); 
-  color: #ff9e62; 
-  font-size: 2.5em; 
-}
-
-
-.white-ball img {
+.second-baner {
+  background-color: #f5761c;
+  height: calc(100% * 1 / 3);
+  width: 100%;
   position: absolute;
-  bottom: 20px; 
-  right: 20px; 
-  width: 100px; 
+top: 100vh;
+}
+
+.baner-text {
+  position: absolute; /* Umożliwia precyzyjne umiejscowienie tekstu */
+  top: 50%; /* Wyrównanie środka w pionie */
+  left: 50%; /* Wyrównanie środka w poziomie */
+  transform: translate(-50%, -50%); /* Przesunięcie, by wyrównać dokładnie */
+  color: white; /* Kolor czcionki */
+font-size: 2em; /* Rozmiar czcionki */
+  text-align: center; /* Wyrównanie tekstu na środku */
+  filter: none; /* Wyłączenie wpływu filtru */
+  z-index: 20; /* Umieszczenie tekstu nad banerem */
+  font-weight: bold; /* Pogrubienie tekstu */
+}
+
+.baner-text-2 {
+  position: absolute;
+top: 60%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: white;
+  font-size: 2em;
+  text-align: center;
+  filter: none;
+  z-index: 20;
+  font-weight: bold;
 }
 
 .graphic {
   position: absolute; 
   bottom: 100px; 
-  left: 190px; 
-  transform: scale(5); 
+left: 100px; 
+transform: scale(1.5); 
   pointer-events: none; 
 }
 
