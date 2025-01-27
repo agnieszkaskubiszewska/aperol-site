@@ -1,52 +1,52 @@
-import './App.css';
+import './Menu.css';
 import React, { Component } from 'react';
 import { motion } from "framer-motion";
-import './Menu.css';
 
 class Menu extends Component {
-  constructor(props) {
-    super(props);
-    this.state = {};
-  }
-
   render() {
+    const { secondBanerRef } = this.props; 
+
     return (
-      <div className='menu'>
-<div className='menu-logo'>
-<img src={require("./grf.jpg")} alt="logo" />
-</div>
-<motion.button
-          className='menu-buttons'
-          whileHover={{ scale: 1.1 }}      
-          whileTap={{ scale: 0.95 }}   
+      <div className="menu">
+        <div className="menu-logo">
+          <img src={require("./grf.jpg")} alt="logo" />
+        </div>
+        <motion.button
+          className="menu-buttons"
+          whileHover={{ scale: 1.1 }}
+          whileTap={{ scale: 0.95 }}
+          onClick={() => secondBanerRef.current.scrollIntoView({ behavior: "smooth" })} 
         >
           About
         </motion.button>
         <motion.button
-          className='menu-buttons'
-          whileHover={{ scale: 1.1 }}      
-          whileTap={{ scale: 0.95 }}   
+          className="menu-buttons"
+          whileHover={{ scale: 1.1 }}
+          whileTap={{ scale: 0.95 }}
+          onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })} 
         >
           Blog
         </motion.button>
         <motion.button
-          className='menu-buttons'
-          whileHover={{ scale: 1.1 }}      
-          whileTap={{ scale: 0.95 }}   
+          className="menu-buttons"
+          whileHover={{ scale: 1.1 }}
+          whileTap={{ scale: 0.95 }}
+          onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}
         >
           Przepisy
         </motion.button>
         <motion.button
-          className='menu-buttons'
-          whileHover={{ scale: 1.1 }}      
-          whileTap={{ scale: 0.95 }}   
+          className="menu-buttons"
+          whileHover={{ scale: 1.1 }}
+          whileTap={{ scale: 0.95 }}
+          onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}
         >
           Zdjęcia
         </motion.button>
         <motion.button
-          className='menu-buttons'
-          whileHover={{ scale: 1.1 }}      
-          whileTap={{ scale: 0.95 }}   
+          className="menu-buttons"
+          whileHover={{ scale: 1.1 }}
+          whileTap={{ scale: 0.95 }}
         >
           Mapa
         </motion.button>

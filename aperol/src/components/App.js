@@ -9,6 +9,8 @@ class App extends Component {
     isAllowed: false,  
   };
 
+  secondBanerRef = React.createRef();
+
   handleConfirmation = (isAllowed) => {
     this.setState({
       isModalOpen: false,
@@ -34,13 +36,27 @@ class App extends Component {
         )}
         {isAllowed && (
           <>
-        <Menu />
-<div className='baner'>
-  <img src={require("./baner.jpg")} alt="baner" />
+            <Menu secondBanerRef={this.secondBanerRef} />
+            <div className="baner">
+              <img src={require("./baner.jpg")} alt="baner" />
+            </div>
+            <div className="baner-text">
+              <h1>Real Aperol Experience</h1>
+            </div>
+            <div className="baner-text-2">
+              <p>Ignite the orange spark!</p>
+            </div>
+            <div ref={this.secondBanerRef} className="second-baner">
+  <img src={require('./left-image.jpg')} alt="Left graphic" className="second-baner-left" />
+  <div className="second-baner-content">
+    <h2 className="second-baner-title">What is the Orange Aperol Spritz?</h2>
+    <p className="second-baner-description">
+      Aperol is a unique blend of bitter orange, herbs, and botanicals, creating a vibrant and refreshing taste.
+      It's the perfect choice for a summer cocktail or a refreshing drink anytime.
+    </p>
+  </div>
+  <img src={require('./right-image.jpg')} alt="Right graphic" className="second-baner-right" />
 </div>
-<div className='baner-text'> <h1>Real Aperol Experience</h1></div>
-<div className='baner-text-2'><p>Ignite the orange spark!</p></div>
-<div className='second-baner'></div>
             <Footer />
           </>
         )}
