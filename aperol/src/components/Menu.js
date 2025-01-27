@@ -12,7 +12,10 @@ class Menu extends Component {
   render() {
     return (
       <div className='menu'>
-        <motion.button
+<div className='menu-logo'>
+<img src={require("./grf.jpg")} alt="logo" />
+</div>
+<motion.button
           className='menu-buttons'
           whileHover={{ scale: 1.1 }}      
           whileTap={{ scale: 0.95 }}   

@@ -1,46 +1,82 @@
 .App {
   text-align: center;
-  background-color: rgb(255, 94, 0);
+  background-color: rgb(255, 94, 0); 
   width: 100%;
-  height: 100vh;
+  height: 100vh; 
+  overflow: hidden; 
 }
 
-.white-ball {
-  position: fixed; /* Umożliwia utrzymanie pozycji na ekranie podczas przewijania */
-  top: 50%; /* Wyrównanie kuli do środka w pionie */
-  left: 30px; /* Odsuwa kulę od lewej krawędzi monitora */
-  width: 500px; /* Szerokość kuli */
-  height: 500px; /* Wysokość kuli */
-  border-radius: 50%; /* Zaokrągla rogi, tworząc kulę */
-  background-color: white; /* Kolor kuli */
-  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1); /* Cień wokół kuli dla lepszego efektu */
-  transform: translateY(-50%); /* Dokładne wyrównanie do środka */
-  color: #ff9e62; /* Kolor tekstu na pomarańczowy */
-  font-size: 2.5em; /* Powiększa czcionkę */
-  
+.baner {
+  position: relative;
+border: black;
+height: 20vh;
+filter: brightness(40%);
 }
 
-.second-ball {
-  position: fixed; /* Umożliwia utrzymanie pozycji na ekranie podczas przewijania */
-  top: 50%; /* Wyrównanie kuli do środka w pionie */
-  right: 50px; /* Odsuwa kulę bliżej środka od prawej krawędzi monitora */
-  width: 750px; /* Szerokość kuli */
-  height: 750px; /* Wysokość kuli */
-  border-radius: 50%; /* Zaokrągla rogi, tworząc kulę */
-  background-color: white; /* Kolor kuli */
-  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1); /* Cień wokół kuli dla lepszego efektu */
-  transform: translateY(-50%); /* Dokładne wyrównanie do środka */
+.second-baner {
+  background-color: #f5761c;
+  height: calc(100% * 1 / 3);
+  width: 100%;
+  position: absolute;
+top: 100vh;
 }
-.white-ball img {
-  position: absolute; 
-  bottom: 100px; 
-  right: 100px; 
-  width: 100px; 
+
+.baner-text {
+  position: absolute; /* Umożliwia precyzyjne umiejscowienie tekstu */
+  top: 50%; /* Wyrównanie środka w pionie */
+  left: 50%; /* Wyrównanie środka w poziomie */
+  transform: translate(-50%, -50%); /* Przesunięcie, by wyrównać dokładnie */
+  color: white; /* Kolor czcionki */
+font-size: 2em; /* Rozmiar czcionki */
+  text-align: center; /* Wyrównanie tekstu na środku */
+  filter: none; /* Wyłączenie wpływu filtru */
+  z-index: 20; /* Umieszczenie tekstu nad banerem */
+  font-weight: bold; /* Pogrubienie tekstu */
+}
+
+.baner-text-2 {
+  position: absolute;
+top: 60%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: white;
+  font-size: 2em;
+  text-align: center;
+  filter: none;
+  z-index: 20;
+  font-weight: bold;
 }
 
 .graphic {
-  position: absolute; /* Ustawiamy na absolute, aby móc przesuwać */
-  bottom: 100px; /* Ustawiamy wysokość, na jakiej obrazek ma być */
-  left: 190px; /* Możemy ustawić wartość 'left' do przesunięcia w lewo */
-  transform: scale(5); /* Zmienia rozmiar grafiki bez zmiany wartości width i height */
+  position: absolute; 
+  bottom: 100px; 
+left: 100px; 
+transform: scale(1.5); 
+  pointer-events: none; 
 }
+
+.modal {
+  position: absolute; 
+  top: 50%; 
+  left: 50%; 
+  transform: translate(-50%, -50%);
+  font-size: 2em;
+  color: white;
+}
+
+.modal-button {
+  background-color: #f5761c;
+  border: none;
+  margin: 0 10px; 
+  display: inline-block;
+  padding: 10px 20px;
+  text-align: center;
+  text-decoration: none;
+  font-size: 16px;
+  color: white;
+  cursor: pointer;
+  border-radius: 30px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+

@@ -42,3 +42,8 @@
     z-index: 100;
     display: block; /* Upewnij się, że obraz nie jest ukryty */
 }
+
+.menu-logo img {    
+width: 175%;
+height: 175%;
+}
