@@ -88,15 +88,65 @@ transform: scale(1.5);
 }
 
 .second-baner-title {
-  font-size: 2em;
+  font-size: 3em;
   color: white;
-  margin: 0; /* Usuń margines */
+  margin: 0; 
+  font-weight: bold;
+margin-left: 130px; 
 }
 
 .second-baner-description {
-  font-size: 1em;
+  font-size: 1.5em;
   color: white;
   margin-top: 20px;
   margin-bottom: 20px;
+  font-weight: normal;
+}
+
+.second-baner-left {
+  position: absolute;
+top: 1,5cm;
+  left: 1cm;
+}     
+
+.second-baner-right {
+  position: absolute;
+top: 1,5cm;
+right: 1cm;
+}     
+
+.third-baner {
+  background-color: white;
+  height: 95vh;
+  width: 100%;
+  position: absolute;
+top: 190vh;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.third-baner-title {
+  font-size: 3em;
+color: orange;
+  margin: 0; 
+font-weight: bold;
+margin-left: 120px; 
+}
+
+.third-baner-recipe-title {
+  font-size: 2em;
+color: orange;
+  margin: 0; 
   font-weight: bold;
+margin-left: 120px; 
+}
+
+.third-baner-recipe-item {
+  font-size: 1.5em;
+color: orange;
+  margin: 0; 
+font-weight: normal;
+margin-left: 120px; 
 }
