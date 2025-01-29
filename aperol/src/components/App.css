@@ -25,7 +25,9 @@ height: 95vh;
   align-items: center;
 }
 .second-baner-content {
-  text-align: center; /* Wyrównanie tekstu w centrum */
+  text-align: center;
+  position: relative;
+  z-index: 2;
 }
 
 .baner-text {
@@ -88,65 +90,94 @@ transform: scale(1.5);
 }
 
 .second-baner-title {
-  font-size: 3em;
+  font-size: 4em;
   color: white;
-  margin: 0; 
+  margin: 0;
   font-weight: bold;
-margin-left: 130px; 
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
 }
 
 .second-baner-description {
-  font-size: 1.5em;
+  font-size: 1.8em;
   color: white;
   margin-top: 20px;
   margin-bottom: 20px;
   font-weight: normal;
+  text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.3);
 }
 
 .second-baner-left {
   position: absolute;
-top: 1,5cm;
+  top: 1.5cm;
   left: 1cm;
-}     
+}
 
 .second-baner-right {
   position: absolute;
-top: 1,5cm;
-right: 1cm;
-}     
+  top: 50%;
+  transform: translateY(-50%);
+  right: 1cm;
+}
 
 .third-baner {
   background-color: white;
   height: 95vh;
   width: 100%;
   position: absolute;
-top: 190vh;
-
+  top: 195vh;
   display: flex;
-  justify-content: center;
-  align-items: center;
+  justify-content: space-between;
+  align-items: flex-start;
+  padding: 2rem;
+}
+
+.third-baner-content {
+  flex: 1;
+  padding-right: 2rem;
 }
 
 .third-baner-title {
-  font-size: 3em;
-color: orange;
-  margin: 0; 
-font-weight: bold;
-margin-left: 120px; 
+  font-size: 2.5em;
+  color: orange;
+  text-align: left;
+  margin-bottom: 2rem;
+  font-weight: bold;
+  margin-top: 4rem;
+}
+
+.third-baner-recipe {
+  margin-left: 2rem;
+}
+
+.third-baner-image {
+  width: 40%;
+  max-width: 400px;
+  object-fit: cover;
+  margin-right: 4rem;
+  margin-top: 8rem;
 }
 
 .third-baner-recipe-title {
-  font-size: 2em;
-color: orange;
+  font-size: 1.6em;
+  color: orange;
   margin: 0; 
   font-weight: bold;
-margin-left: 120px; 
+  margin-left: 120px; 
 }
 
 .third-baner-recipe-item {
-  font-size: 1.5em;
-color: orange;
-  margin: 0; 
-font-weight: normal;
-margin-left: 120px; 
+  font-size: 1.2em;
+  color: orange;
+  margin: 0.5rem 0;
+  font-weight: normal;
+  margin-left: 120px;
+}
+
+.third-baner-recipe ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+.third-baner-recipe h3:not(:first-child) {
+  margin-top: 2rem;
 }
