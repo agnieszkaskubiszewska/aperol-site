@@ -10,6 +10,8 @@ class App extends Component {
   };
 
   secondBanerRef = React.createRef();
+  recipeRef = React.createRef();
+  galleryRef = React.createRef();
 
   handleConfirmation = (isAllowed) => {
     this.setState({
@@ -36,7 +38,11 @@ class App extends Component {
         )}
         {isAllowed && (
           <>
-            <Menu secondBanerRef={this.secondBanerRef} />
+            <Menu 
+              secondBanerRef={this.secondBanerRef} 
+              recipeRef={this.recipeRef} 
+              galleryRef={this.galleryRef}
+            />
             <div className="baner">
               <img src={require("./baner.jpg")} alt="baner" />
             </div>
@@ -63,20 +69,32 @@ and botanicals</strong>, creating <br />
 </div>
   <img src={require('./right-image.jpg')} alt="Right graphic" className="second-baner-right" />
 </div>
-<div className="third-baner">
-<h2 className="third-baner-title">The official Aperol Spritz recipe approved by the IBA (International Bartenders Association).</h2>
-<div className="third-baner-recipe">
-<h3 className="third-baner-recipe-title">Ingredients:</h3>
-  <ul>
-<li className="third-baner-recipe-item">1 part Aperol</li>
-    <li className="third-baner-recipe-item">1 part Prosecco</li>
-    <li className="third-baner-recipe-item">1 part soda water</li>
-    <li className="third-baner-recipe-item">1 part orange slice</li>
-    <li className="third-baner-recipe-item">1 part orange slice</li>
-  </ul>
+<div ref={this.recipeRef} className="third-baner">
+  <div className="third-baner-content">
+    <h2 className="third-baner-title">The official Aperol Spritz recipe approved by the IBA (International Bartenders Association).</h2>
+    <div className="third-baner-recipe">
+      <h3 className="third-baner-recipe-title">Ingredients:</h3>
+      <ul>
+        <li className="third-baner-recipe-item">1 part Aperol</li>
+        <li className="third-baner-recipe-item">1 part Prosecco</li>
+        <li className="third-baner-recipe-item">1 part soda water</li>
+        <li className="third-baner-recipe-item">1 part orange slice</li>
+        <li className="third-baner-recipe-item">1 part orange slice</li>
+      </ul>
+      
+      <h3 className="third-baner-recipe-title">Instructions:</h3>
+      <ul>
+        <li className="third-baner-recipe-item">1. Fill a large wine glass with ice</li>
+        <li className="third-baner-recipe-item">2. Pour in the Prosecco</li>
+        <li className="third-baner-recipe-item">3. Add the Aperol</li>
+        <li className="third-baner-recipe-item">4. Top with a splash of soda water</li>
+        <li className="third-baner-recipe-item">5. Garnish with an orange slice</li>
+      </ul>
+    </div>
+  </div>
+  <img src={require('./right-image.jpg')} alt="Recipe graphic" className="third-baner-image" />
 </div>
-</div>
-            <Footer />
+<Footer />
           </>
         )}
         {!isAllowed && !isModalOpen && <h2 style={{ color: 'white' }}>Access Denied</h2>}

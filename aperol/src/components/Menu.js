@@ -4,7 +4,7 @@ import { motion } from "framer-motion";
 
 class Menu extends Component {
   render() {
-    const { secondBanerRef } = this.props; 
+    const { secondBanerRef, recipeRef, galleryRef } = this.props; 
 
     return (
       <div className="menu">
@@ -31,7 +31,12 @@ class Menu extends Component {
           className="menu-buttons"
           whileHover={{ scale: 1.1 }}
           whileTap={{ scale: 0.95 }}
-          onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}
+          onClick={() => {
+            const yOffset = -100;
+            const element = recipeRef.current;
+            const y = element.getBoundingClientRect().top + window.pageYOffset + yOffset;
+            window.scrollTo({top: y, behavior: 'smooth'});
+          }}
         >
           Przepisy
         </motion.button>
@@ -39,7 +44,6 @@ class Menu extends Component {
           className="menu-buttons"
           whileHover={{ scale: 1.1 }}
           whileTap={{ scale: 0.95 }}
-          onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}
         >
           Zdjęcia
         </motion.button>
