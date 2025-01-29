@@ -2,6 +2,7 @@ import './App.css';
 import React, { Component } from 'react';
 import Menu from './Menu';
 import Footer from './Footer';
+import Gallery from './Gallery';
 
 class App extends Component {
   state = {
@@ -93,6 +94,9 @@ and botanicals</strong>, creating <br />
     </div>
   </div>
   <img src={require('./right-image.jpg')} alt="Recipe graphic" className="third-baner-image" />
+</div>
+<div ref={this.galleryRef} className="gallery-wrapper">
+  <Gallery />
 </div>
 <Footer />
           </>

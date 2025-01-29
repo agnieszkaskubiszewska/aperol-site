@@ -4,7 +4,7 @@ import { motion } from "framer-motion";
 
 class Menu extends Component {
   render() {
-    const { secondBanerRef, recipeRef, galleryRef } = this.props; 
+    const { secondBanerRef, recipeRef } = this.props; 
 
     return (
       <div className="menu">
