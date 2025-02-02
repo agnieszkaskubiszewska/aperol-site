@@ -203,3 +203,11 @@ color:  #FF4F00;
   background-color: #FF4F00;
   padding-top: 100px; /* dla menu */
 }
+
+:root {
+  --tc-font-family-body: "Bitter", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", "Liberation Sans", sans-serif;
+}
+
+body {
+  font-family: var(--tc-font-family-body);
+}
