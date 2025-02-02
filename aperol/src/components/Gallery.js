@@ -1,63 +1,41 @@
-import React, { Component } from 'react';
-import Lightbox from 'yet-another-react-lightbox';
-import "yet-another-react-lightbox/styles.css";
-import { ImageList, ImageListItem } from '@mui/material';
+import React from 'react';
 import './Gallery.css';
 
-class Gallery extends Component {
-  state = {
-    isOpen: false,
-    currentImageIndex: 0
-  };
-
-  images = [
-    {
-      src: require('./grf.jpg'),
-      thumbnail: require('./grf.jpg'),
-    },
-    {
-      src: require('./right-image.jpg'),
-      thumbnail: require('./right-image.jpg'),
-    },
-    {
-      src: require('./left-image.jpg'),
-      thumbnail: require('./left-image.jpg'),
-    },
-    // Tutaj możesz dodać więcej zdjęć w tym samym formacie
+const Gallery = () => {
+  const images = [
+    `${process.env.PUBLIC_URL}/gallery-images/1.jpg`,
+    `${process.env.PUBLIC_URL}/gallery-images/2.jpg`,
+    `${process.env.PUBLIC_URL}/gallery-images/3.jpg`,
+    `${process.env.PUBLIC_URL}/gallery-images/4.jpg`,
+    `${process.env.PUBLIC_URL}/gallery-images/5.jpg`,
+    `${process.env.PUBLIC_URL}/gallery-images/6.jpg`,
+    `${process.env.PUBLIC_URL}/gallery-images/7.jpg`,
+    `${process.env.PUBLIC_URL}/gallery-images/8.jpg`,
+    `${process.env.PUBLIC_URL}/gallery-images/9.jpg`,
+    `${process.env.PUBLIC_URL}/gallery-images/10.jpg`,
+    `${process.env.PUBLIC_URL}/gallery-images/11.jpg`,
+    `${process.env.PUBLIC_URL}/gallery-images/12.jpg`,
+    `${process.env.PUBLIC_URL}/gallery-images/13.jpg`,
+    `${process.env.PUBLIC_URL}/gallery-images/14.jpg`,
+    `${process.env.PUBLIC_URL}/gallery-images/15.jpg`,
+ 
   ];
 
-  render() {
-    return (
-      <div className="gallery-section">
-        <h2 className="gallery-title">Our Aperol Moments</h2>
-        <div className="gallery-container">
-          <ImageList sx={{ width: '100%', height: 'auto' }} cols={3} rowHeight={320}>
-            {this.images.map((item, index) => (
-              <ImageListItem 
-                key={index}
-                onClick={() => this.setState({ isOpen: true, currentImageIndex: index })}
-                sx={{ cursor: 'pointer' }}
-              >
-                <img
-                  src={item.thumbnail}
-                  alt={`Aperol ${index + 1}`}
-                  loading="lazy"
-                  style={{ height: '320px', objectFit: 'cover' }}
-                />
-              </ImageListItem>
-            ))}
-          </ImageList>
-          
-          <Lightbox
-            open={this.state.isOpen}
-            close={() => this.setState({ isOpen: false })}
-            index={this.state.currentImageIndex}
-            slides={this.images}
+  return (
+    <div className="gallery">
+      <h1 className="gallery-title">Real Aperol moments</h1>
+      <div className="gallery-grid">
+        {images.map((image, index) => (
+          <img 
+            key={index}
+            src={image}
+            alt={`Aperol moment ${index + 1}`}
+            className="gallery-image"
           />
-        </div>
+        ))}
       </div>
-    );
-  }
-}
+    </div>
+  );
+};
 
 export default Gallery; 
