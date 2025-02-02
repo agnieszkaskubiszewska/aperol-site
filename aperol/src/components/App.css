@@ -3,23 +3,21 @@
   background-color: rgb(255, 94, 0); 
   width: 100%;
   height: 100vh; 
-  overflow: hidden; 
 }
 
 .baner {
-  position: relative;
+position: static;
 border: black;
 height: 20vh;
 filter: brightness(40%);
 }
 
 .second-baner {
-  background-color: #f5761c;
-height: 95vh;
+  background-color: #FF4F00;
+  height: 95vh;
   width: 100%;
   position: absolute;
   top: 100vh;
-
   display: flex;
   justify-content: center;
   align-items: center;
@@ -74,7 +72,7 @@ transform: scale(1.5);
 }
 
 .modal-button {
-  background-color: #f5761c;
+  background-color: #FF4F00;
   border: none;
   margin: 0 10px; 
   display: inline-block;
@@ -138,7 +136,7 @@ transform: scale(1.5);
 
 .third-baner-title {
   font-size: 2.5em;
-  color: orange;
+  color: #FF4F00;
   text-align: left;
   margin-bottom: 2rem;
   font-weight: bold;
@@ -159,7 +157,7 @@ transform: scale(1.5);
 
 .third-baner-recipe-title {
   font-size: 1.6em;
-  color: orange;
+color: #FF4F00;
   margin: 0; 
   font-weight: bold;
   margin-left: 120px; 
@@ -167,7 +165,7 @@ transform: scale(1.5);
 
 .third-baner-recipe-item {
   font-size: 1.2em;
-  color: orange;
+color:  #FF4F00;
   margin: 0.5rem 0;
   font-weight: normal;
   margin-left: 120px;
@@ -180,4 +178,28 @@ transform: scale(1.5);
 
 .third-baner-recipe h3:not(:first-child) {
   margin-top: 2rem;
+}
+
+.gallery-wrapper {
+  width: 100%;
+  margin-top: 50px;
+  position: absolute;
+  top: 290vh;
+  z-index: 1;
+}
+
+.more-wrapper {
+  width: 100%;
+  margin-top: 50px;
+  position: absolute;
+  top: 420vh;
+  z-index: 1;
+}
+
+.more-wrapper-full {
+  width: 100%;
+  min-height: 100vh;
+  position: relative;
+  background-color: #FF4F00;
+  padding-top: 100px; /* dla menu */
 }

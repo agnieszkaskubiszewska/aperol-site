@@ -3,19 +3,46 @@ import React, { Component } from 'react';
 import { motion } from "framer-motion";
 
 class Menu extends Component {
+  handleNavigation = (ref) => {
+    const { showOnlyMore, toggleMoreView } = this.props;
+    
+    if (showOnlyMore) {
+      toggleMoreView();
+      setTimeout(() => {
+        if (ref) {  // Jeśli ref istnieje, scrolluj do sekcji
+          const yOffset = -100;
+          const element = ref.current;
+          const y = element.getBoundingClientRect().top + window.pageYOffset + yOffset;
+          window.scrollTo({top: y, behavior: 'smooth'});
+        } else {  // Jeśli ref nie istnieje (dla Menu), scrolluj na górę
+          window.scrollTo({top: 0, behavior: 'smooth'});
+        }
+      }, 100);
+    } else {
+      if (ref) {
+        const yOffset = -100;
+        const element = ref.current;
+        const y = element.getBoundingClientRect().top + window.pageYOffset + yOffset;
+        window.scrollTo({top: y, behavior: 'smooth'});
+      } else {
+        window.scrollTo({top: 0, behavior: 'smooth'});
+      }
+    }
+  };
+
   render() {
-    const { secondBanerRef, recipeRef } = this.props; 
+    const { secondBanerRef, recipeRef, galleryRef, toggleMoreView } = this.props;
 
     return (
       <div className="menu">
-        <div className="menu-logo">
+        <div className="menu-logo" onClick={() => this.handleNavigation(null)}>
           <img src={require("./grf.jpg")} alt="logo" />
         </div>
         <motion.button
           className="menu-buttons"
           whileHover={{ scale: 1.1 }}
           whileTap={{ scale: 0.95 }}
-          onClick={() => secondBanerRef.current.scrollIntoView({ behavior: "smooth" })} 
+          onClick={() => this.handleNavigation(secondBanerRef)}
         >
           About
         </motion.button>
@@ -23,36 +50,25 @@ class Menu extends Component {
           className="menu-buttons"
           whileHover={{ scale: 1.1 }}
           whileTap={{ scale: 0.95 }}
-          onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })} 
+          onClick={() => this.handleNavigation(recipeRef)}
         >
-          Blog
+          Recipe
         </motion.button>
         <motion.button
           className="menu-buttons"
           whileHover={{ scale: 1.1 }}
           whileTap={{ scale: 0.95 }}
-          onClick={() => {
-            const yOffset = -100;
-            const element = recipeRef.current;
-            const y = element.getBoundingClientRect().top + window.pageYOffset + yOffset;
-            window.scrollTo({top: y, behavior: 'smooth'});
-          }}
+          onClick={() => this.handleNavigation(galleryRef)}
         >
-          Przepisy
+          Gallery
         </motion.button>
         <motion.button
           className="menu-buttons"
           whileHover={{ scale: 1.1 }}
           whileTap={{ scale: 0.95 }}
+          onClick={toggleMoreView}
         >
-          Zdjęcia
-        </motion.button>
-        <motion.button
-          className="menu-buttons"
-          whileHover={{ scale: 1.1 }}
-          whileTap={{ scale: 0.95 }}
-        >
-          Mapa
+          More
         </motion.button>
       </div>
     );

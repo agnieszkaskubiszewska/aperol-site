@@ -3,11 +3,13 @@ import React, { Component } from 'react';
 import Menu from './Menu';
 import Footer from './Footer';
 import Gallery from './Gallery';
+import More from './More';
 
 class App extends Component {
   state = {
     isModalOpen: true, 
-    isAllowed: false,  
+    isAllowed: false,
+    showOnlyMore: false,
   };
 
   secondBanerRef = React.createRef();
@@ -21,8 +23,18 @@ class App extends Component {
     });
   };
 
+  toggleMoreView = () => {
+    this.setState(prevState => ({
+      showOnlyMore: !prevState.showOnlyMore
+    }), () => {
+      if (this.state.showOnlyMore) {
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+      }
+    });
+  };
+
   render() {
-    const { isModalOpen, isAllowed } = this.state;
+    const { isModalOpen, isAllowed, showOnlyMore } = this.state;
 
     return (
       <div className={`App ${isModalOpen ? 'blur' : ''}`}>
@@ -43,62 +55,72 @@ class App extends Component {
               secondBanerRef={this.secondBanerRef} 
               recipeRef={this.recipeRef} 
               galleryRef={this.galleryRef}
+              toggleMoreView={this.toggleMoreView}
+              showOnlyMore={showOnlyMore}
             />
-            <div className="baner">
-              <img src={require("./baner.jpg")} alt="baner" />
-            </div>
-            <div className="baner-text">
-              <h1>Real Aperol Experience</h1>
-            </div>
-<div className="baner-text-2">
-              <p>Ignite the orange spark!</p>
-            </div>
-            <div ref={this.secondBanerRef} className="second-baner">
-  <img src={require('./left-image.jpg')} alt="Left graphic" className="second-baner-left" />
-<div className="second-baner-content">
-<h2 className="second-baner-title">What is the Aperol Spritz?</h2>
-<p className="second-baner-description">
-Aperol is a unique blend of <br />
- <strong>orange, herbs, <br />
-and botanicals</strong>, creating <br />
-  a vibrant and refreshing <br />
-  taste. It's the perfect <br />
-  choice for a summer <br />
-  cocktail or a refreshing <br />
-  drink anytime.
-</p>
-</div>
-  <img src={require('./right-image.jpg')} alt="Right graphic" className="second-baner-right" />
-</div>
-<div ref={this.recipeRef} className="third-baner">
-  <div className="third-baner-content">
-    <h2 className="third-baner-title">The official Aperol Spritz recipe approved by the IBA (International Bartenders Association).</h2>
-    <div className="third-baner-recipe">
-      <h3 className="third-baner-recipe-title">Ingredients:</h3>
-      <ul>
-        <li className="third-baner-recipe-item">1 part Aperol</li>
-        <li className="third-baner-recipe-item">1 part Prosecco</li>
-        <li className="third-baner-recipe-item">1 part soda water</li>
-        <li className="third-baner-recipe-item">1 part orange slice</li>
-        <li className="third-baner-recipe-item">1 part orange slice</li>
-      </ul>
-      
-      <h3 className="third-baner-recipe-title">Instructions:</h3>
-      <ul>
-        <li className="third-baner-recipe-item">1. Fill a large wine glass with ice</li>
-        <li className="third-baner-recipe-item">2. Pour in the Prosecco</li>
-        <li className="third-baner-recipe-item">3. Add the Aperol</li>
-        <li className="third-baner-recipe-item">4. Top with a splash of soda water</li>
-        <li className="third-baner-recipe-item">5. Garnish with an orange slice</li>
-      </ul>
-    </div>
-  </div>
-  <img src={require('./right-image.jpg')} alt="Recipe graphic" className="third-baner-image" />
-</div>
-<div ref={this.galleryRef} className="gallery-wrapper">
-  <Gallery />
-</div>
-<Footer />
+            {!showOnlyMore ? (
+              <>
+                <div className="baner">
+                  <img src={require("./baner.jpg")} alt="baner" />
+                </div>
+                <div className="baner-text">
+                  <h1>Real Aperol Experience</h1>
+                </div>
+                <div className="baner-text-2">
+                  <p>Ignite the orange spark!</p>
+                </div>
+                <div ref={this.secondBanerRef} className="second-baner">
+                  <img src={require('./left-image.jpg')} alt="Left graphic" className="second-baner-left" />
+                  <div className="second-baner-content">
+                    <h2 className="second-baner-title">What is the Aperol Spritz?</h2>
+                    <p className="second-baner-description">
+                      Aperol is a unique blend of <br />
+                      <strong>orange, herbs, <br />
+                      and botanicals</strong>, creating <br />
+                      a vibrant and refreshing <br />
+                      taste. It's the perfect <br />
+                      choice for a summer <br />
+                      cocktail or a refreshing <br />
+                      drink anytime.
+                    </p>
+                  </div>
+                  <img src={require('./right-image.jpg')} alt="Right graphic" className="second-baner-right" />
+                </div>
+                <div ref={this.recipeRef} className="third-baner">
+                  <div className="third-baner-content">
+                    <h2 className="third-baner-title">The official Aperol Spritz recipe approved by the IBA (International Bartenders Association).</h2>
+                    <div className="third-baner-recipe">
+                      <h3 className="third-baner-recipe-title">Ingredients:</h3>
+                      <ul>
+                        <li className="third-baner-recipe-item">1 part Aperol</li>
+                        <li className="third-baner-recipe-item">1 part Prosecco</li>
+                        <li className="third-baner-recipe-item">1 part soda water</li>
+                        <li className="third-baner-recipe-item">1 part orange slice</li>
+                        <li className="third-baner-recipe-item">1 part orange slice</li>
+                      </ul>
+                      
+                      <h3 className="third-baner-recipe-title">Instructions:</h3>
+                      <ul>
+                        <li className="third-baner-recipe-item">1. Fill a large wine glass with ice</li>
+                        <li className="third-baner-recipe-item">2. Pour in the Prosecco</li>
+                        <li className="third-baner-recipe-item">3. Add the Aperol</li>
+                        <li className="third-baner-recipe-item">4. Top with a splash of soda water</li>
+                        <li className="third-baner-recipe-item">5. Garnish with an orange slice</li>
+                      </ul>
+                    </div>
+                  </div>
+                  <img src={require('./right-image.jpg')} alt="Recipe graphic" className="third-baner-image" />
+                </div>
+                <div ref={this.galleryRef} className="gallery-wrapper">
+                  <Gallery />
+                </div>
+              </>
+            ) : (
+              <div ref={this.moreRef} className="more-wrapper-full">
+                <More />
+              </div>
+            )}
+            <Footer />
           </>
         )}
         {!isAllowed && !isModalOpen && <h2 style={{ color: 'white' }}>Access Denied</h2>}
