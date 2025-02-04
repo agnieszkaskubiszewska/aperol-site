@@ -70,6 +70,14 @@ class Menu extends Component {
         >
           More
         </motion.button>
+        <motion.button
+          className="menu-buttons"
+          whileHover={{ scale: 1.1 }}
+          whileTap={{ scale: 0.95 }}
+          onClick={toggleMoreView}
+        >
+Aperol League
+        </motion.button>
       </div>
     );
   }
