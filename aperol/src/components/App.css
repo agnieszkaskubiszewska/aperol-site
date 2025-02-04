@@ -204,6 +204,14 @@ color:  #FF4F00;
   padding-top: 100px; /* dla menu */
 }
 
+.rank-wrapper-full {
+  width: 100%;
+  min-height: 100vh;
+  position: relative;
+  background-color: #FF4F00;
+  padding-top: 100px;
+}
+
 :root {
   --tc-font-family-body: "Bitter", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", "Liberation Sans", sans-serif;
 }

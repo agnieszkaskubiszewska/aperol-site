@@ -4,17 +4,21 @@ import Menu from './Menu';
 import Footer from './Footer';
 import Gallery from './Gallery';
 import More from './More';
+import Rank from './Rank';
 
 class App extends Component {
   state = {
     isModalOpen: true, 
     isAllowed: false,
     showOnlyMore: false,
+    showOnlyRank: false,
   };
 
   secondBanerRef = React.createRef();
   recipeRef = React.createRef();
   galleryRef = React.createRef();
+  moreRef = React.createRef();
+  rankRef = React.createRef();
 
   handleConfirmation = (isAllowed) => {
     this.setState({
@@ -33,8 +37,18 @@ class App extends Component {
     });
   };
 
+  toggleRankView = () => {
+    this.setState(prevState => ({
+      showOnlyRank: !prevState.showOnlyRank
+    }), () => {
+      if (this.state.showOnlyRank) {
+        this.rankRef.current.scrollIntoView({ behavior: 'smooth' });
+      }
+    });
+  };
+
   render() {
-    const { isModalOpen, isAllowed, showOnlyMore } = this.state;
+    const { isModalOpen, isAllowed, showOnlyMore, showOnlyRank } = this.state;
 
     return (
       <div className={`App ${isModalOpen ? 'blur' : ''}`}>
@@ -57,8 +71,11 @@ class App extends Component {
               galleryRef={this.galleryRef}
               toggleMoreView={this.toggleMoreView}
               showOnlyMore={showOnlyMore}
+              toggleRankView={this.toggleRankView}
+              showOnlyRank={showOnlyRank}
+              rankRef={this.rankRef}
             />
-            {!showOnlyMore ? (
+            {!showOnlyMore && !showOnlyRank ? (
               <>
                 <div className="baner">
                   <img src={require("./baner.jpg")} alt="baner" />
@@ -115,9 +132,13 @@ class App extends Component {
                   <Gallery />
                 </div>
               </>
-            ) : (
+            ) : showOnlyMore ? (
               <div ref={this.moreRef} className="more-wrapper-full">
                 <More />
+              </div>
+            ) : (
+              <div ref={this.rankRef} className="rank-wrapper-full">
+                <Rank />
               </div>
             )}
             <Footer />

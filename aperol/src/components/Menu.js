@@ -4,17 +4,18 @@ import { motion } from "framer-motion";
 
 class Menu extends Component {
   handleNavigation = (ref) => {
-    const { showOnlyMore, toggleMoreView } = this.props;
+    const { showOnlyMore, toggleMoreView, showOnlyRank, toggleRankView } = this.props;
     
-    if (showOnlyMore) {
-      toggleMoreView();
+    if (showOnlyMore || showOnlyRank) {
+      if (showOnlyMore) toggleMoreView();
+      if (showOnlyRank) toggleRankView();
       setTimeout(() => {
-        if (ref) {  // Jeśli ref istnieje, scrolluj do sekcji
+        if (ref) {
           const yOffset = -100;
           const element = ref.current;
           const y = element.getBoundingClientRect().top + window.pageYOffset + yOffset;
           window.scrollTo({top: y, behavior: 'smooth'});
-        } else {  // Jeśli ref nie istnieje (dla Menu), scrolluj na górę
+        } else {
           window.scrollTo({top: 0, behavior: 'smooth'});
         }
       }, 100);
@@ -31,7 +32,7 @@ class Menu extends Component {
   };
 
   render() {
-    const { secondBanerRef, recipeRef, galleryRef, toggleMoreView } = this.props;
+    const { secondBanerRef, recipeRef, galleryRef, toggleMoreView, toggleRankView } = this.props;
 
     return (
       <div className="menu">
@@ -74,9 +75,9 @@ class Menu extends Component {
           className="menu-buttons"
           whileHover={{ scale: 1.1 }}
           whileTap={{ scale: 0.95 }}
-          onClick={toggleMoreView}
+          onClick={toggleRankView}
         >
-Aperol League
+          Aperol League
         </motion.button>
       </div>
     );
