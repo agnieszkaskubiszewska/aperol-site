@@ -1,21 +1,21 @@
 .menu {
-    background-color: rgba(204, 88, 3, 0.8); /* Ustawia kolor tła na lekko transparentny */
+    background-color: #f5761c;
     position: fixed;
     top: 0;
-    right: 0; /* Przenosi menu na prawą stronę */
-    width: 100%; /* Menu zajmuje całą szerokość */
-    height: 100px; /* Wysokość menu */
-    display: flex; /* Ustawia elementy w rzędzie */
-    justify-content: flex-end; /* Wyrównuje elementy do prawej strony */
-    align-items: center; /* Wyrównuje elementy w pionie */
-    padding: 0 20px; /* Dodaje odstępy po bokach */
-    z-index: 1000; /* Ustawia menu na najwyższym poziomie */
+    right: 0;
+    width: 100%;
+    height: 100px;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    padding: 0 20px;
+    z-index: 1000;
 }
 
 .menu-buttons {
-    background-color: #f5761c;
+background-color: #f87d25;
     border: none;
-    margin: 0 10px; /* Odstępy między przyciskami */
+margin: 0 10px; 
     display: inline-block;
     padding: 10px 20px;
     text-align: center;
@@ -23,24 +23,24 @@
     font-size: 16px;
     color: white;
     cursor: pointer;
-    border-radius: 30px; /* Zwiększono zaokrąglenie */
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Dodano delikatny cień */
-    transition: background-color 0.3s ease, transform 0.2s ease; /* Płynna zmiana koloru i skalowanie */
+    border-radius: 30px; 
+box-shadow: 0 4px 6px rgb(255, 255, 255); 
+    transition: background-color 0.3s ease, transform 0.2s ease; 
 }
 
 .menu-buttons:hover {
-    background-color: #ff9e62; /* Zmiana koloru przy najechaniu */
-    transform: scale(1.1); /* Lekkie powiększenie przy najechaniu */
+background-color: #FF4F00; 
+transform: scale(2.7); 
 }
 
 .menu-logo {
     position: absolute;
     top: 10px;
     left: 50px;
-    width: 50px; /* Dostosuj wielkość logo */
+    width: 50px; 
     height: auto;
     z-index: 100;
-    display: block; /* Upewnij się, że obraz nie jest ukryty */
+    display: block; 
 }
 
 .menu-logo img {    
