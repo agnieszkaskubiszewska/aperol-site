@@ -1,8 +1,23 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  overflow-x: hidden;
+  width: 100vw;
+  min-height: 100vh;
+  font-family: var(--tc-font-family-body);
+}
+
 .App {
   text-align: center;
   background-color: rgb(255, 94, 0); 
-  width: 100%;
-  height: 100vh; 
+  width: 100vw;
+  min-height: 100vh;
+  position: relative;
+  overflow-x: hidden;
 }
 
 .baner {
@@ -15,7 +30,7 @@ filter: brightness(40%);
 .second-baner {
   background-color: #FF4F00;
   height: 95vh;
-  width: 100%;
+  width: 100vw;
   position: absolute;
   top: 100vh;
   display: flex;
@@ -120,7 +135,7 @@ transform: scale(1.5);
 .third-baner {
   background-color: white;
   height: 95vh;
-  width: 100%;
+  width: 100vw;
   position: absolute;
   top: 195vh;
   display: flex;
@@ -181,7 +196,7 @@ color:  #FF4F00;
 }
 
 .gallery-wrapper {
-  width: 100%;
+  width: 100vw;
   margin-top: 50px;
   position: absolute;
   top: 290vh;
@@ -189,7 +204,7 @@ color:  #FF4F00;
 }
 
 .more-wrapper {
-  width: 100%;
+  width: 100vw;
   margin-top: 50px;
   position: absolute;
   top: 420vh;
@@ -197,15 +212,15 @@ color:  #FF4F00;
 }
 
 .more-wrapper-full {
-  width: 100%;
+  width: 100vw;
   min-height: 100vh;
   position: relative;
   background-color: #FF4F00;
-  padding-top: 100px; /* dla menu */
+  padding-top: 100px;
 }
 
 .rank-wrapper-full {
-  width: 100%;
+  width: 100vw;
   min-height: 100vh;
   position: relative;
   background-color: #FF4F00;
@@ -218,4 +233,13 @@ color:  #FF4F00;
 
 body {
   font-family: var(--tc-font-family-body);
+}
+
+.more-articles,
+.rank-container,
+.gallery-grid {
+  max-width: 1400px;
+  margin: 0 auto;
+  width: 100%;
+  padding: 0 20px;
 }
