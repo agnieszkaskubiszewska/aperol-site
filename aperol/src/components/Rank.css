@@ -1,0 +1,59 @@
+.rank-section {
+  padding: 50px 40px;
+  color: white;
+}
+
+.rank-title {
+  text-align: center;
+font-size: 3.5em;
+  margin-bottom: 40px;
+}
+
+.rank-container {
+  max-width: 1400px;
+  margin: 0 auto;
+}
+
+.rank-intro {
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+.rank-intro h2 {
+  font-size: 2em;
+  margin-bottom: 20px;
+}
+
+.location-info {
+  padding: 15px;
+  max-width: 300px;
+}
+
+.location-info h3 {
+  color: #FF4F00;
+  margin-bottom: 10px;
+}
+
+.location-image {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  border-radius: 8px;
+  margin: 10px 0;
+}
+
+.location-info p {
+  color: #333;
+  font-size: 14px;
+  line-height: 1.4;
+}
+
+.leaflet-popup-content {
+  margin: 0;
+  width: 300px !important;
+}
+
+.leaflet-popup-content-wrapper {
+  padding: 0;
+  border-radius: 8px;
+}

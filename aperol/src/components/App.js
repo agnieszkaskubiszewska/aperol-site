@@ -29,7 +29,8 @@ class App extends Component {
 
   toggleMoreView = () => {
     this.setState(prevState => ({
-      showOnlyMore: !prevState.showOnlyMore
+      showOnlyMore: !prevState.showOnlyMore,
+      showOnlyRank: false
     }), () => {
       if (this.state.showOnlyMore) {
         window.scrollTo({ top: 0, behavior: 'smooth' });
@@ -39,10 +40,11 @@ class App extends Component {
 
   toggleRankView = () => {
     this.setState(prevState => ({
-      showOnlyRank: !prevState.showOnlyRank
+      showOnlyRank: !prevState.showOnlyRank,
+      showOnlyMore: false
     }), () => {
       if (this.state.showOnlyRank) {
-        this.rankRef.current.scrollIntoView({ behavior: 'smooth' });
+        window.scrollTo({ top: 0, behavior: 'smooth' });
       }
     });
   };
