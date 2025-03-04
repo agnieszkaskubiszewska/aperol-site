@@ -19,98 +19,98 @@ const locations = [
     id: 1,
     position: [45.4642, 9.1900],
     title: "Sky Bar Milano",
-    image: `${process.env.PUBLIC_URL}/gallery-images/milano.jpg`,
+    image: `${process.env.PUBLIC_URL}/gallery-images/1.jpg`,
     description: "Najlepszy Aperol Spritz serwowany z widokiem na Duomo di Milano. Kultowe miejsce łączące tradycję z nowoczesnością."
   },
   {
     id: 2,
     position: [41.3851, 2.1734],
     title: "Sunset Lounge Barcelona",
-    image: `${process.env.PUBLIC_URL}/gallery-images/barcelona.jpg`,
+image: `${process.env.PUBLIC_URL}/gallery-images/2.jpg`,
     description: "Taras z widokiem na Sagrada Familia, gdzie Aperol Spritz podawany jest z katalońskim twistem."
   },
   {
     id: 3,
-    position: [44.4949, 11.3426],  // Bologna - Piazza Maggiore
+    position: [44.4949, 11.3426],
     title: "Ristorante Teresina",
-    image: `${process.env.PUBLIC_URL}/gallery-images/barcelona.jpg`,
+image: `${process.env.PUBLIC_URL}/gallery-images/3.jpg`,
     description: "Delicious Aperol Spritz served in a cozy atmosphere in the heart of Bologna, right next to Piazza Maggiore."
   },
   {
     id: 4,
-    position: [44.4937, 11.3432],  // Bologna - Via Pescherie Vecchie
+    position: [44.4937, 11.3432],
     title: "Caffe del Rosso",
-    image: `${process.env.PUBLIC_URL}/gallery-images/barcelona.jpg`,
+image: `${process.env.PUBLIC_URL}/gallery-images/4.jpg`,
     description: "Sophisticated Aperol Spritz served between espresso, cappuccino and locals in the historic center of Bologna."
-  },    
+  },
   {
     id: 5,
-    position: [43.7696, 11.2558],  // Florence - Near Ponte Vecchio
+    position: [43.7696, 11.2558],
     title: "Osteria del Fiore",
-    image: `${process.env.PUBLIC_URL}/gallery-images/barcelona.jpg`,
+image: `${process.env.PUBLIC_URL}/gallery-images/5.jpg`,
     description: "Florentine Aperol Spritz with a stunning view of Ponte Vecchio. Full of flavor, full of fun."
   },
   {
     id: 6,
-    position: [41.9028, 12.4964],  // Rome - Near Pantheon
+    position: [41.9028, 12.4964],
     title: "Bar del Fico",
-    image: `${process.env.PUBLIC_URL}/gallery-images/barcelona.jpg`,
+image: `${process.env.PUBLIC_URL}/gallery-images/6.jpg`,
     description: "Classic Roman aperitivo spot near the Pantheon. Experience Aperol Spritz in the eternal city, surrounded by ancient history."
   },
   {
     id: 7,
-    position: [40.8518, 14.2681],  // Naples - Chiaia district
+    position: [40.8518, 14.2681],
     title: "Terrazza Calabritto",
-    image: `${process.env.PUBLIC_URL}/gallery-images/barcelona.jpg`,
+image: `${process.env.PUBLIC_URL}/gallery-images/7.jpg`,
     description: "Elegant rooftop bar in Naples' fashionable Chiaia district, offering Aperol Spritz with breathtaking views of the Bay of Naples."
   },
   {
     id: 8,
-    position: [38.1157, 13.3615],  // Palermo - Historic Center
+    position: [38.1157, 13.3615],
     title: "Bocum Mixology",
-    image: `${process.env.PUBLIC_URL}/gallery-images/barcelona.jpg`,
+image: `${process.env.PUBLIC_URL}/gallery-images/8.jpg`,
     description: "Modern bar in historic Palermo, where Aperol Spritz meets Sicilian hospitality. Steps away from the famous Quattro Canti."
   },
   {
     id: 9,
-    position: [41.1272, 16.8718],  // Bari - Old Town
+    position: [41.1272, 16.8718],
     title: "Caffè Borghese",
-    image: `${process.env.PUBLIC_URL}/gallery-images/barcelona.jpg`,
+image: `${process.env.PUBLIC_URL}/gallery-images/9.jpg`,
     description: "Charming spot in Bari's old town, where you can enjoy Aperol Spritz alongside traditional Puglian aperitivo."
   },
   {
     id: 10,
-    position: [39.2238, 9.1217],  // Cagliari, Sardynia
+    position: [39.2238, 9.1217],
     title: "Libarium Nostrum",
-    image: `${process.env.PUBLIC_URL}/gallery-images/barcelona.jpg`,
+image: `${process.env.PUBLIC_URL}/gallery-images/10.jpg`,
     description: "Stylish rooftop bar in Cagliari's Castello district, offering Aperol Spritz with panoramic views of the Mediterranean Sea and ancient city walls."
   },
   {
     id: 11,
-    position: [41.0976, 9.4037],  // Porto Cervo, Sardynia
+    position: [41.0976, 9.4037],
     title: "Phi Beach",
-    image: `${process.env.PUBLIC_URL}/gallery-images/barcelona.jpg`,
+image: `${process.env.PUBLIC_URL}/gallery-images/11.jpg`,
     description: "Exclusive Costa Smeralda beach club where Aperol Spritz meets luxury yacht life and stunning Sardinian sunsets."
   },
   {
     id: 12,
-    position: [37.5079, 15.0830],  // Catania, Sycylia
+    position: [37.5079, 15.0830],
     title: "Vermut",
-    image: `${process.env.PUBLIC_URL}/gallery-images/barcelona.jpg`,
+image: `${process.env.PUBLIC_URL}/gallery-images/12.jpg`,
     description: "Trendy bar near Piazza Duomo, serving Aperol Spritz with a view of Mount Etna and Baroque architecture."
   },
   {
     id: 13,
-    position: [38.0186, 12.5137],  // Trapani, Sycylia
+    position: [38.0186, 12.5137],
     title: "Torre di Ligny",
-    image: `${process.env.PUBLIC_URL}/gallery-images/barcelona.jpg`,
+image: `${process.env.PUBLIC_URL}/gallery-images/13.jpg`,
     description: "Historic watchtower bar offering Aperol Spritz at sunset with views of the Egadi Islands and salt pans."
   },
   {
     id: 14,
-    position: [36.8986, 15.0687],  // Siracusa, Sycylia
+    position: [36.8986, 15.0687],
     title: "Ortigia Social",
-    image: `${process.env.PUBLIC_URL}/gallery-images/barcelona.jpg`,
+image: `${process.env.PUBLIC_URL}/gallery-images/14.jpg`,
     description: "Charming spot in Ortigia's ancient streets, where Aperol Spritz is served alongside fresh seafood and local traditions."
   }
 ];

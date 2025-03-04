@@ -8,16 +8,21 @@ body {
   overflow-x: hidden;
   width: 100vw;
   min-height: 100vh;
+  margin: 0;
+  padding: 0;
+  background-color: #FF4F00;
   font-family: var(--tc-font-family-body);
 }
 
 .App {
   text-align: center;
-  background-color: rgb(255, 94, 0); 
+  background-color: #FF4F00;
   width: 100vw;
   min-height: 100vh;
   position: relative;
   overflow-x: hidden;
+  margin: 0;
+  padding: 0;
 }
 
 .baner {
@@ -211,19 +216,14 @@ color:  #FF4F00;
   z-index: 1;
 }
 
-.more-wrapper-full {
-  width: 100vw;
-  min-height: 100vh;
-  position: relative;
-  background-color: #FF4F00;
-  padding-top: 100px;
-}
-
+.more-wrapper-full,
 .rank-wrapper-full {
   width: 100vw;
   min-height: 100vh;
   position: relative;
   background-color: #FF4F00;
+  margin: 0;
+  padding: 0;
   padding-top: 100px;
 }
 
