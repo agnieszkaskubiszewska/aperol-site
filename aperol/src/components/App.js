@@ -68,8 +68,8 @@ class App extends Component {
         {isAllowed && (
           <>
             <Menu 
-              secondBanerRef={this.secondBanerRef} 
-              recipeRef={this.recipeRef} 
+              secondBanerRef={this.secondBanerRef}
+              recipeRef={this.recipeRef}
               galleryRef={this.galleryRef}
               toggleMoreView={this.toggleMoreView}
               showOnlyMore={showOnlyMore}

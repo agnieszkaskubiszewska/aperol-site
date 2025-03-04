@@ -11,22 +11,16 @@ class Menu extends Component {
       if (showOnlyRank) toggleRankView();
       setTimeout(() => {
         if (ref) {
-          const yOffset = -100;
-          const element = ref.current;
-          const y = element.getBoundingClientRect().top + window.pageYOffset + yOffset;
-          window.scrollTo({top: y, behavior: 'smooth'});
+          ref.current.scrollIntoView({ behavior: 'smooth' });
         } else {
-          window.scrollTo({top: 0, behavior: 'smooth'});
+          window.scrollTo({ top: 0, behavior: 'smooth' });
         }
       }, 100);
     } else {
       if (ref) {
-        const yOffset = -100;
-        const element = ref.current;
-        const y = element.getBoundingClientRect().top + window.pageYOffset + yOffset;
-        window.scrollTo({top: y, behavior: 'smooth'});
+        ref.current.scrollIntoView({ behavior: 'smooth', block: 'start' });
       } else {
-        window.scrollTo({top: 0, behavior: 'smooth'});
+        window.scrollTo({ top: 0, behavior: 'smooth' });
       }
     }
   };
