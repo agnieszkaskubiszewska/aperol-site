@@ -240,6 +240,16 @@
     margin-left: 352px;
     padding-right: 0;
   }
+
+  .variations-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 768px) {
+  .variations-grid {
+    grid-template-columns: 1fr;
+  }
 }
 
 .variations-article {
@@ -314,16 +324,4 @@
   font-size: 1.1em;
   line-height: 1.6;
   text-align: center;
-}
-
-@media (max-width: 1200px) {
-  .variations-grid {
-    grid-template-columns: repeat(2, 1fr);
-  }
-}
-
-@media (max-width: 768px) {
-  .variations-grid {
-    grid-template-columns: 1fr;
-  }
 }
