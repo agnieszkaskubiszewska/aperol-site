@@ -1,12 +1,15 @@
 .more-section {
-background-color: #FF4F00;
+  background-color: #FF4F00;
   padding: 50px 40px;
   color: white;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
 }
 
 .more-title {
   text-align: center;
-font-size: 4em;
+  font-size: 4em;
   margin-bottom: 40px;
   margin-top: 30px;
 }
@@ -32,6 +35,8 @@ font-size: 4em;
   padding: 0 20px;
   position: relative;
   margin-right: 40px;
+  flex: 1;
+  padding-bottom: 50px;
 }
 
 .more-article {
@@ -108,7 +113,7 @@ font-size: 4em;
 
 .more-article-text1 strong {
   font-weight: 700;
-color: #FFD700;
+  color: #FFD700;
 }
 
 .more-article-image {
