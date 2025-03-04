@@ -1,6 +1,6 @@
 {
   "files": {
-    "main.css": "/aperol-site/static/css/main.4bfcaf32.css",
+    "main.css": "/aperol-site/static/css/main.87520c80.css",
     "main.js": "/aperol-site/static/js/main.ab53b9b1.js",
     "static/js/453.0c71cd45.chunk.js": "/aperol-site/static/js/453.0c71cd45.chunk.js",
     "static/media/baner.jpg": "/aperol-site/static/media/baner.7f97366d2528479a9e8b.jpg",
@@ -8,12 +8,12 @@
     "static/media/left-image.jpg": "/aperol-site/static/media/left-image.76243d925785cbb59352.jpg",
     "static/media/right-image.jpg": "/aperol-site/static/media/right-image.04e53cbbe0e728ccd387.jpg",
     "index.html": "/aperol-site/index.html",
-    "main.4bfcaf32.css.map": "/aperol-site/static/css/main.4bfcaf32.css.map",
+    "main.87520c80.css.map": "/aperol-site/static/css/main.87520c80.css.map",
     "main.ab53b9b1.js.map": "/aperol-site/static/js/main.ab53b9b1.js.map",
     "453.0c71cd45.chunk.js.map": "/aperol-site/static/js/453.0c71cd45.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.4bfcaf32.css",
+    "static/css/main.87520c80.css",
     "static/js/main.ab53b9b1.js"
   ]
 }
